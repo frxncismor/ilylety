@@ -1,0 +1,62 @@
+
+<section class="principal"> 
+  <div class="contenedor">
+    <div class="container" >
+        <h1 *ngIf="selectedName == null">Hola, por favor elige como quieres que te llame:</h1>
+        <h1  *ngIf="selectedName != null">Hola {{selectedName}}, tengo algo que decirte...</h1>
+         <!-- <button type="button" [ngClass]="x.value % 2 == 0 ? 'button primary-light' : 'button primary' " *ngFor="let x of items" (click)="select(x.name)" >{{x.name}}</button> <br> -->
+         <div class="row">
+             <div class="col-md-6">
+                <img src="https://image.flaticon.com/icons/svg/1995/1995539.svg" alt="">
+             </div>
+             <div class="col-md-6">
+                 <div class="row" *ngIf="selectedName == null">
+                    <div class="col-md-6" *ngFor="let x of items" >
+                         <div class="square" (click)="select(x.name)">
+                            <div class="square-body" [ngClass]="'color-'+x.class">
+                                {{x.name | uppercase}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" >
+                            <h4>Otro:</h4>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" style="margin-left: 6% !important; width: 324px !important;" placeholder="" aria-label="Recipient's username" [(ngModel)]="nameSelected" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                  <button class="button primary" type="button" id="button-addon2" (click)="select(nameSelected)">Listo</button>
+                                </div>
+                              </div>
+                    </div>
+                 </div>
+                 <div class="row" *ngIf="selectedName != null">
+                   <div class="col-md-6">
+                    <div class="square" (click)="changeName()">
+                        <div class="square-body large color-secondary">
+                            {{'No me gustó ese nombre' | uppercase}}
+                        </div>
+                    </div>
+                   </div>
+                   <div class="col-md-6">
+                    <div class="square" (click)="changeName()">
+                        <div class="square-body color-primary">
+                            {{'¿Qué cosa?' | uppercase}}
+                        </div>
+                    </div>
+                   </div>
+                   
+                 </div>
+             </div>
+         </div>
+    </div>
+
+  </div>
+
+
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="wave wave4"></div>
+</section>
+
+
+

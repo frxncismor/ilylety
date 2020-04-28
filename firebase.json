@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "ilylety",
+    "public": "dist/lastTry",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

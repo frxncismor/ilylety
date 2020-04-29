@@ -12,6 +12,7 @@ import 'hammerjs';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { LetterComponent } from './pages/letter/letter.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDkcul34XzZqlAj7Yf9BV3QE0k_tSsg_DY',
@@ -28,6 +29,7 @@ const firebaseConfig = {
   declarations: [
     AppComponent,
     WelcomeComponent,
+    LetterComponent,
   ],
   imports: [
     BrowserModule,

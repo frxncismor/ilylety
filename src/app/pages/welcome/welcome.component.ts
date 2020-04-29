@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -15,7 +16,7 @@ export class WelcomeComponent implements OnInit {
   ];
   selectedName: any = null;
   nameSelected: any;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -26,5 +27,9 @@ export class WelcomeComponent implements OnInit {
 
   changeName() {
     this.selectedName = null;
+  }
+
+  next(){
+    this.router.navigateByUrl('/letter');
   }
 }

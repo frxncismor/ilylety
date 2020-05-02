@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceService } from 'src/app/services/service.service';
 
 @Component({
   selector: 'app-welcome',
@@ -16,7 +17,7 @@ export class WelcomeComponent implements OnInit {
   ];
   selectedName: any = null;
   nameSelected: any;
-  constructor(private router: Router) { }
+  constructor(private router: Router, public service: ServiceService) { }
 
   ngOnInit(): void {
   }
@@ -31,5 +32,6 @@ export class WelcomeComponent implements OnInit {
 
   next(){
     this.router.navigateByUrl('/letter');
+    this.service.setName(this.selectedName);
   }
 }

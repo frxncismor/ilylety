@@ -13,12 +13,31 @@
         background-color: #84dcc6;
         color: white;
     }
+    &.accept{
+
+      a{
+        color: #be3e82;
+      }
+      background-color: white;  
+      font-weight: bold;
+      border: 1px solid gainsboro;
+      border-radius: 10px;
+      width: 105%;
+      padding: 5px;
+
+    }
 }
 *{
   margin: 0;
   padding: 0;
 }
 
+h5{
+  padding: 4%;
+  margin-top: 10px !important;
+  font-size: 12pt;
+  font-weight: 100;
+}
 .principal{
   position: relative;
   width: 100%;
@@ -170,7 +189,7 @@ input, input:focus{
 }
 @media (min-width: 1281px){
     .contenedor{
-        padding-left: 16% !important;
+        padding-left: 0% !important;
     }
 
 }
